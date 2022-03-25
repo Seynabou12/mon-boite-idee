@@ -1,0 +1,14 @@
+.carte{
+    display: inline-flex;
+}
+.card{
+    width: 100%;
+}
+.titre{
+    text-align: center;
+}
+
+.tete{
+    background-color: #ce0033;
+    color: #fff;
+}
