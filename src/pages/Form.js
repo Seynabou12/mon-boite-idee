@@ -27,9 +27,9 @@ const Form = () => {
       "Titre": titre,
       "Suggestion": contenuSaisi,
     }).then((response) => {
-      console.log(response);
+      // console.log(response);
     }).catch((error) => {
-      console.log(error);
+      // console.log(error);
     });
 
     console.log(titre);
@@ -42,7 +42,7 @@ const Form = () => {
       <form className='col mt-5'>
 
         <div className="mb-3">
-          <label htmlFor="titre" className="form-label" name="">Titre</label>
+          <label htmlFor="titre" className="form-label">Titre</label>
           <input
             id='titre'
             onChange={handleChangeTitre}
