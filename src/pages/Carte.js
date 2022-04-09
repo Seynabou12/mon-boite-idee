@@ -11,7 +11,6 @@ import axios from "axios";
             axios.put(`https://seynabou-boite-idee.herokuapp.com/api/ideas/status/${idee.id}`)
             .then( (response) => setStatus(response.data.status))
         }
-        
     return (
         
         <div className="col-4 carte" >
@@ -20,25 +19,25 @@ import axios from "axios";
             
                 <div className=" flex-column d-flex justify-content-between">
                     <div className='tete'>
-                    <div className='card-header text-center'>
-                        <h4>Card Idee</h4>
+                    <div className='card-header   text-center'>
+                        <h5 className="card-title fw-bold">{idee.Titre}</h5>
                     </div>
                     </div>
                     <div className="card-block-titre text-center card-body">
-                        <h5 className="card-title fw-bold">{idee.Titre}</h5>
+                        
                         <p className="card-text">
                         {idee.Suggestion}
                         </p>
                     </div>
                     <div className='card-footer text-center'>
-                        <h6 className="card-subtitle mb-2 text-gris ">
-                            {status ? "approuvée" : "réfusée"}
-                        </h6>
-                    </div>  
-                    <div className="d-flex justify-content-between">
-                        <i className="bi bi-check-circle text-success card-link btn" style={{fontSize: "2rem" }} id={"approuve"} onClick={change_status}></i>
-                        <i className="bi bi-x-circle card-link btn" style={{fontSize: "2rem", color: "#ce0033"}} id={"refuse"} onClick={change_status}></i>
+                        <div className="d-flex justify-content-between">
+                        <button type="button" class="btn btn-outline-success" style={{fontSize: "1rem" }} id={"approuve"} onClick={change_status}>Approuver</button>
+                        <button type="button" class="btn btn-outline-danger" style={{fontSize: "1rem" }} id={"refuse"} onClick={change_status}>Refuser</button>
+                            {/* <button className="btn btn-gray text-success card-link btn" >Approuver</button>
+                            <button className="btn btn-danger card-link btn" >Refuser</button> */}
+                        </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
